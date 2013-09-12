@@ -28,7 +28,7 @@
 
 @implementation NMListeningSet
 
-+ (instancetype) listeningSetForProtocol:(Protocol *)protocol
++ (id) listeningSetForProtocol:(Protocol *)protocol
 {
     NMListeningSet* set = [[self alloc] init];
     set.listeningProtocol = protocol;

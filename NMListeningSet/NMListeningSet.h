@@ -14,7 +14,7 @@
 
 //
 // constructor... listeningSetForProtocol:@protocol(MySpecialProtocol)
-+ (instancetype) listeningSetForProtocol:(Protocol*) protocol;
++ (id) listeningSetForProtocol:(Protocol*) protocol;
 
 // Add a listner, it will only be added if it conforms to the listeningProtocol
 - (void) registerListener:(id) listner;
