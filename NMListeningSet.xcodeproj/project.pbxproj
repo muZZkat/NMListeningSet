@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECCDBD8617E1A44C00E0AF48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCDBD8517E1A44C00E0AF48 /* Foundation.framework */; };
+		ECCDBD8817E1A44C00E0AF48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCDBD8717E1A44C00E0AF48 /* CoreGraphics.framework */; };
+		ECCDBD8A17E1A44C00E0AF48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCDBD8917E1A44C00E0AF48 /* UIKit.framework */; };
+		ECCDBD9017E1A44C00E0AF48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECCDBD8E17E1A44C00E0AF48 /* InfoPlist.strings */; };
+		ECCDBD9217E1A44C00E0AF48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCDBD9117E1A44C00E0AF48 /* main.m */; };
+		ECCDBD9617E1A44C00E0AF48 /* NMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCDBD9517E1A44C00E0AF48 /* NMAppDelegate.m */; };
+		ECCDBD9F17E1A44C00E0AF48 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCDBD9E17E1A44C00E0AF48 /* XCTest.framework */; };
+		ECCDBDA017E1A44C00E0AF48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCDBD8517E1A44C00E0AF48 /* Foundation.framework */; };
+		ECCDBDA117E1A44C00E0AF48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCDBD8917E1A44C00E0AF48 /* UIKit.framework */; };
+		ECCDBDA917E1A44C00E0AF48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECCDBDA717E1A44C00E0AF48 /* InfoPlist.strings */; };
+		ECCDBDAB17E1A44C00E0AF48 /* NMListeningSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCDBDAA17E1A44C00E0AF48 /* NMListeningSetTests.m */; };
+		ECCDBDB717E1A4E400E0AF48 /* NMListeningSet.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCDBDB617E1A4E400E0AF48 /* NMListeningSet.m */; };
+		ECCDBDBA17E1A51600E0AF48 /* NMExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCDBDB917E1A51600E0AF48 /* NMExampleController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECCDBDA217E1A44C00E0AF48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECCDBD7A17E1A44C00E0AF48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECCDBD8117E1A44C00E0AF48;
+			remoteInfo = NMListeningSet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECCDBD8217E1A44C00E0AF48 /* NMListeningSet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NMListeningSet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCDBD8517E1A44C00E0AF48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ECCDBD8717E1A44C00E0AF48 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ECCDBD8917E1A44C00E0AF48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ECCDBD8D17E1A44C00E0AF48 /* NMListeningSet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NMListeningSet-Info.plist"; sourceTree = "<group>"; };
+		ECCDBD8F17E1A44C00E0AF48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECCDBD9117E1A44C00E0AF48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECCDBD9317E1A44C00E0AF48 /* NMListeningSet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NMListeningSet-Prefix.pch"; sourceTree = "<group>"; };
+		ECCDBD9417E1A44C00E0AF48 /* NMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMAppDelegate.h; sourceTree = "<group>"; };
+		ECCDBD9517E1A44C00E0AF48 /* NMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMAppDelegate.m; sourceTree = "<group>"; };
+		ECCDBD9D17E1A44C00E0AF48 /* NMListeningSetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NMListeningSetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCDBD9E17E1A44C00E0AF48 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ECCDBDA617E1A44C00E0AF48 /* NMListeningSetTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NMListeningSetTests-Info.plist"; sourceTree = "<group>"; };
+		ECCDBDA817E1A44C00E0AF48 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ECCDBDAA17E1A44C00E0AF48 /* NMListeningSetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMListeningSetTests.m; sourceTree = "<group>"; };
+		ECCDBDB517E1A4E400E0AF48 /* NMListeningSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMListeningSet.h; sourceTree = "<group>"; };
+		ECCDBDB617E1A4E400E0AF48 /* NMListeningSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMListeningSet.m; sourceTree = "<group>"; };
+		ECCDBDB817E1A51600E0AF48 /* NMExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMExampleController.h; sourceTree = "<group>"; };
+		ECCDBDB917E1A51600E0AF48 /* NMExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMExampleController.m; sourceTree = "<group>"; };
+		ECCDBDBB17E1A85100E0AF48 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		ECCDBDBC17E1A85100E0AF48 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		ECCDBDBF17E1A91500E0AF48 /* NMListeningSet.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NMListeningSet.podspec; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECCDBD7F17E1A44C00E0AF48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCDBD8817E1A44C00E0AF48 /* CoreGraphics.framework in Frameworks */,
+				ECCDBD8A17E1A44C00E0AF48 /* UIKit.framework in Frameworks */,
+				ECCDBD8617E1A44C00E0AF48 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCDBD9A17E1A44C00E0AF48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCDBD9F17E1A44C00E0AF48 /* XCTest.framework in Frameworks */,
+				ECCDBDA117E1A44C00E0AF48 /* UIKit.framework in Frameworks */,
+				ECCDBDA017E1A44C00E0AF48 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECCDBD7917E1A44C00E0AF48 = {
+			isa = PBXGroup;
+			children = (
+				ECCDBDBB17E1A85100E0AF48 /* LICENSE */,
+				ECCDBDBC17E1A85100E0AF48 /* README.md */,
+				ECCDBDBF17E1A91500E0AF48 /* NMListeningSet.podspec */,
+				ECCDBD8B17E1A44C00E0AF48 /* NMListeningSet */,
+				ECCDBDA417E1A44C00E0AF48 /* NMListeningSetTests */,
+				ECCDBD8417E1A44C00E0AF48 /* Frameworks */,
+				ECCDBD8317E1A44C00E0AF48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECCDBD8317E1A44C00E0AF48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECCDBD8217E1A44C00E0AF48 /* NMListeningSet.app */,
+				ECCDBD9D17E1A44C00E0AF48 /* NMListeningSetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECCDBD8417E1A44C00E0AF48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECCDBD8517E1A44C00E0AF48 /* Foundation.framework */,
+				ECCDBD8717E1A44C00E0AF48 /* CoreGraphics.framework */,
+				ECCDBD8917E1A44C00E0AF48 /* UIKit.framework */,
+				ECCDBD9E17E1A44C00E0AF48 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECCDBD8B17E1A44C00E0AF48 /* NMListeningSet */ = {
+			isa = PBXGroup;
+			children = (
+				ECCDBDB517E1A4E400E0AF48 /* NMListeningSet.h */,
+				ECCDBDB617E1A4E400E0AF48 /* NMListeningSet.m */,
+				ECCDBDB817E1A51600E0AF48 /* NMExampleController.h */,
+				ECCDBDB917E1A51600E0AF48 /* NMExampleController.m */,
+				ECCDBD9417E1A44C00E0AF48 /* NMAppDelegate.h */,
+				ECCDBD9517E1A44C00E0AF48 /* NMAppDelegate.m */,
+				ECCDBD8C17E1A44C00E0AF48 /* Supporting Files */,
+			);
+			path = NMListeningSet;
+			sourceTree = "<group>";
+		};
+		ECCDBD8C17E1A44C00E0AF48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECCDBD8D17E1A44C00E0AF48 /* NMListeningSet-Info.plist */,
+				ECCDBD8E17E1A44C00E0AF48 /* InfoPlist.strings */,
+				ECCDBD9117E1A44C00E0AF48 /* main.m */,
+				ECCDBD9317E1A44C00E0AF48 /* NMListeningSet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECCDBDA417E1A44C00E0AF48 /* NMListeningSetTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECCDBDAA17E1A44C00E0AF48 /* NMListeningSetTests.m */,
+				ECCDBDA517E1A44C00E0AF48 /* Supporting Files */,
+			);
+			path = NMListeningSetTests;
+			sourceTree = "<group>";
+		};
+		ECCDBDA517E1A44C00E0AF48 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECCDBDA617E1A44C00E0AF48 /* NMListeningSetTests-Info.plist */,
+				ECCDBDA717E1A44C00E0AF48 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECCDBD8117E1A44C00E0AF48 /* NMListeningSet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECCDBDAE17E1A44C00E0AF48 /* Build configuration list for PBXNativeTarget "NMListeningSet" */;
+			buildPhases = (
+				ECCDBD7E17E1A44C00E0AF48 /* Sources */,
+				ECCDBD7F17E1A44C00E0AF48 /* Frameworks */,
+				ECCDBD8017E1A44C00E0AF48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NMListeningSet;
+			productName = NMListeningSet;
+			productReference = ECCDBD8217E1A44C00E0AF48 /* NMListeningSet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECCDBD9C17E1A44C00E0AF48 /* NMListeningSetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECCDBDB117E1A44C00E0AF48 /* Build configuration list for PBXNativeTarget "NMListeningSetTests" */;
+			buildPhases = (
+				ECCDBD9917E1A44C00E0AF48 /* Sources */,
+				ECCDBD9A17E1A44C00E0AF48 /* Frameworks */,
+				ECCDBD9B17E1A44C00E0AF48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECCDBDA317E1A44C00E0AF48 /* PBXTargetDependency */,
+			);
+			name = NMListeningSetTests;
+			productName = NMListeningSetTests;
+			productReference = ECCDBD9D17E1A44C00E0AF48 /* NMListeningSetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECCDBD7A17E1A44C00E0AF48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NM;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = NullMonkey;
+				TargetAttributes = {
+					ECCDBD9C17E1A44C00E0AF48 = {
+						TestTargetID = ECCDBD8117E1A44C00E0AF48;
+					};
+				};
+			};
+			buildConfigurationList = ECCDBD7D17E1A44C00E0AF48 /* Build configuration list for PBXProject "NMListeningSet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ECCDBD7917E1A44C00E0AF48;
+			productRefGroup = ECCDBD8317E1A44C00E0AF48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECCDBD8117E1A44C00E0AF48 /* NMListeningSet */,
+				ECCDBD9C17E1A44C00E0AF48 /* NMListeningSetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECCDBD8017E1A44C00E0AF48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCDBD9017E1A44C00E0AF48 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCDBD9B17E1A44C00E0AF48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCDBDA917E1A44C00E0AF48 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECCDBD7E17E1A44C00E0AF48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCDBD9217E1A44C00E0AF48 /* main.m in Sources */,
+				ECCDBD9617E1A44C00E0AF48 /* NMAppDelegate.m in Sources */,
+				ECCDBDB717E1A4E400E0AF48 /* NMListeningSet.m in Sources */,
+				ECCDBDBA17E1A51600E0AF48 /* NMExampleController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECCDBD9917E1A44C00E0AF48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECCDBDAB17E1A44C00E0AF48 /* NMListeningSetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECCDBDA317E1A44C00E0AF48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECCDBD8117E1A44C00E0AF48 /* NMListeningSet */;
+			targetProxy = ECCDBDA217E1A44C00E0AF48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECCDBD8E17E1A44C00E0AF48 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECCDBD8F17E1A44C00E0AF48 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ECCDBDA717E1A44C00E0AF48 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECCDBDA817E1A44C00E0AF48 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECCDBDAC17E1A44C00E0AF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECCDBDAD17E1A44C00E0AF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECCDBDAF17E1A44C00E0AF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NMListeningSet/NMListeningSet-Prefix.pch";
+				INFOPLIST_FILE = "NMListeningSet/NMListeningSet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ECCDBDB017E1A44C00E0AF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NMListeningSet/NMListeningSet-Prefix.pch";
+				INFOPLIST_FILE = "NMListeningSet/NMListeningSet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ECCDBDB217E1A44C00E0AF48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NMListeningSet.app/NMListeningSet";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NMListeningSet/NMListeningSet-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NMListeningSetTests/NMListeningSetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ECCDBDB317E1A44C00E0AF48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NMListeningSet.app/NMListeningSet";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NMListeningSet/NMListeningSet-Prefix.pch";
+				INFOPLIST_FILE = "NMListeningSetTests/NMListeningSetTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECCDBD7D17E1A44C00E0AF48 /* Build configuration list for PBXProject "NMListeningSet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECCDBDAC17E1A44C00E0AF48 /* Debug */,
+				ECCDBDAD17E1A44C00E0AF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECCDBDAE17E1A44C00E0AF48 /* Build configuration list for PBXNativeTarget "NMListeningSet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECCDBDAF17E1A44C00E0AF48 /* Debug */,
+				ECCDBDB017E1A44C00E0AF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECCDBDB117E1A44C00E0AF48 /* Build configuration list for PBXNativeTarget "NMListeningSetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECCDBDB217E1A44C00E0AF48 /* Debug */,
+				ECCDBDB317E1A44C00E0AF48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECCDBD7A17E1A44C00E0AF48 /* Project object */;
+}
