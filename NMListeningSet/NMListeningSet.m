@@ -101,6 +101,11 @@
                     return [observer methodSignatureForSelector:aSelector];
                 }
             }
+            
+            // none of the observers respond, just return a void signature
+            // so it doesn't cause a does not responsd to selector exception
+            signature = [NSMethodSignature signatureWithObjCTypes: "@^v^c"];
+
         }
         else
         {
