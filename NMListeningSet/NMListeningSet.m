@@ -94,7 +94,8 @@
         // check and make sure the selector conforms to the protocol object
         if([self.protocolObject methodSignatureForSelector:aSelector])
         {
-            for(id observer in self.listnersTable)
+            NSHashTable* listners = [self.listnersTable copy];
+            for(id observer in listners)
             {
                 if([observer respondsToSelector:aSelector])
                 {
@@ -117,7 +118,8 @@
 
 - (void)forwardInvocation:(NSInvocation*)anInvocation
 {
-    for(id observer in self.listnersTable)
+    NSHashTable* listners = [self.listnersTable copy];
+    for(id observer in listners)
     {
         if([observer respondsToSelector:[anInvocation selector]])
         {
@@ -133,7 +135,8 @@
         return YES;
     }
     
-    for(id observer in self.listnersTable)
+    NSHashTable* listners = [self.listnersTable copy];
+    for(id observer in listners)
     {
         if([observer respondsToSelector:aSelector])
         {
