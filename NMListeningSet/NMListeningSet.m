@@ -123,7 +123,15 @@
     {
         if([observer respondsToSelector:[anInvocation selector]])
         {
-            [anInvocation invokeWithTarget:observer];
+            if(self.queue) {
+                [anInvocation retainArguments];
+                dispatch_async(self.queue, ^{
+                    [anInvocation invokeWithTarget:observer];
+                });
+            } else {
+                [anInvocation invokeWithTarget:observer];
+            }
+            
         }
     }
 }
