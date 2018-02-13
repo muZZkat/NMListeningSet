@@ -46,6 +46,16 @@
     return _listenerTable;
 }
 
+- (NSHashTable *)listenerTableCopy
+{
+	NSHashTable* listeners;
+	@synchronized(self.listenerTable)
+	{
+		listeners = [self.listenerTable copy];
+	}
+	return listeners;
+}
+
 - (NMProtocolObject*) protocolObject
 {
     if (_protocolObject==nil) {
@@ -67,19 +77,27 @@
 {
     if([listner conformsToProtocol:self.listeningProtocol])
     {
-		[self.listenerTable addObject:listner];
-    }
+		@synchronized(self.listenerTable)
+		{
+			[self.listenerTable addObject:listner];
+		}
+	}
 }
 
 - (void) unregisterListener:(id) listner
 {
-	[self.listenerTable removeObject:listner];
+	@synchronized(self.listenerTable)
+	{
+		[self.listenerTable removeObject:listner];
+	}
 }
-
 
 - (void) unregisterAllListeners
 {
-	[self.listenerTable removeAllObjects];
+	@synchronized(self.listenerTable)
+	{
+		[self.listenerTable removeAllObjects];
+	}
 }
 
 #pragma mark -
@@ -94,7 +112,7 @@
         // check and make sure the selector conforms to the protocol object
         if([self.protocolObject methodSignatureForSelector:aSelector])
         {
-			NSHashTable* listeners = [self.listenerTable copy];
+			NSHashTable* listeners = [self listenerTableCopy];
 			for(id observer in listeners)
             {
                 if([observer respondsToSelector:aSelector])
@@ -118,7 +136,7 @@
 
 - (void)forwardInvocation:(NSInvocation*)anInvocation
 {
-	NSHashTable* listeners = [self.listenerTable copy];
+	NSHashTable* listeners = [self listenerTableCopy];
     for(id observer in listeners)
     {
         if([observer respondsToSelector:[anInvocation selector]])
@@ -143,7 +161,7 @@
         return YES;
     }
     
-	NSHashTable* listeners = [self.listenerTable copy];
+	NSHashTable* listeners = [self listenerTableCopy];
     for(id observer in listeners)
     {
         if([observer respondsToSelector:aSelector])
