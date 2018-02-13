@@ -16,7 +16,7 @@
 @interface NMListeningSet ()
 
 // NSHashTable is modeled after NSSet but provides different options, in particular to support weak relationships.
-@property (strong, nonatomic) NSHashTable* listnersTable;
+@property (strong, nonatomic) NSHashTable* listenerTable;
 
 // The protocol the listeners are conforming to
 @property (strong, nonatomic, readwrite) Protocol* listeningProtocol;
@@ -38,12 +38,22 @@
 #pragma mark -
 #pragma Properties
 
-- (NSHashTable *)listnersTable
+- (NSHashTable *)listenerTable
 {
-    if(_listnersTable==nil) {
-        _listnersTable = [NSHashTable weakObjectsHashTable];
+    if(_listenerTable==nil) {
+        _listenerTable = [NSHashTable weakObjectsHashTable];
     }
-    return _listnersTable;
+    return _listenerTable;
+}
+
+- (NSHashTable *)listenerTableCopy
+{
+	NSHashTable* listeners;
+	@synchronized(self.listenerTable)
+	{
+		listeners = [self.listenerTable copy];
+	}
+	return listeners;
 }
 
 - (NMProtocolObject*) protocolObject
@@ -67,19 +77,27 @@
 {
     if([listner conformsToProtocol:self.listeningProtocol])
     {
-        [self.listnersTable addObject:listner];
-    }
+		@synchronized(self.listenerTable)
+		{
+			[self.listenerTable addObject:listner];
+		}
+	}
 }
 
 - (void) unregisterListener:(id) listner
 {
-    [self.listnersTable removeObject:listner];
+	@synchronized(self.listenerTable)
+	{
+		[self.listenerTable removeObject:listner];
+	}
 }
-
 
 - (void) unregisterAllListeners
 {
-    [self.listnersTable removeAllObjects];
+	@synchronized(self.listenerTable)
+	{
+		[self.listenerTable removeAllObjects];
+	}
 }
 
 #pragma mark -
@@ -94,8 +112,8 @@
         // check and make sure the selector conforms to the protocol object
         if([self.protocolObject methodSignatureForSelector:aSelector])
         {
-            NSHashTable* listners = [self.listnersTable copy];
-            for(id observer in listners)
+			NSHashTable* listeners = [self listenerTableCopy];
+			for(id observer in listeners)
             {
                 if([observer respondsToSelector:aSelector])
                 {
@@ -118,8 +136,8 @@
 
 - (void)forwardInvocation:(NSInvocation*)anInvocation
 {
-    NSHashTable* listners = [self.listnersTable copy];
-    for(id observer in listners)
+	NSHashTable* listeners = [self listenerTableCopy];
+    for(id observer in listeners)
     {
         if([observer respondsToSelector:[anInvocation selector]])
         {
@@ -143,8 +161,8 @@
         return YES;
     }
     
-    NSHashTable* listners = [self.listnersTable copy];
-    for(id observer in listners)
+	NSHashTable* listeners = [self listenerTableCopy];
+    for(id observer in listeners)
     {
         if([observer respondsToSelector:aSelector])
         {
